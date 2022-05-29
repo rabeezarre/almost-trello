@@ -10,12 +10,15 @@
     <div class="w-full" v-if="isCreating">
       <form class="flex flex-col" @submit.prevent="handleFormSubmit(colId)">
         <input
-          class="mb-2 py-2 px-2 placeholder-slate-300 text-slate-600 relative bg-white rounded border border-slate-300 outline-none focus:outline-none focus:ring w-full"
+          class="mb-2 py-2 px-2 placeholder-slate-300 text-slate-600 relative
+          bg-white rounded border border-slate-300 outline-none
+          focus:outline-none focus:ring w-full"
           name="text"
           v-model="name"
           type="text"
           placeholder="Enter a title for this card..."
           autocomplete="off"
+          maxlength = "50"
         />
         <div class="flex flex-row gap-4 place-content-center">
           <button class="rounded-md py-1 px-2 bg-green-700 text-white hover:bg-green-800">

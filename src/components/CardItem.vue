@@ -4,10 +4,13 @@
     draggable="true"
     @dragstart="startDrag($event, card)"
   >
-    <div class="w-11/12">
+    <div class="w-11/12 break-words">
       {{ card.text }}
     </div>
-    <div class="w-1/12 text-white hover:text-black" @click="removeCard(card.id)">
+    <div
+      class="w-1/12 text-white hover:text-black text-center font-bold"
+      @click="removeCard(card.id)"
+    >
       X
     </div>
   </div>
@@ -22,11 +25,10 @@ const removeCard = (cardId) => {
 };
 
 const startDrag = (event, card) => {
-  event.dataTransfer.dropEffect = 'move'
-  event.dataTransfer.effectAllowed = 'move'
-  event.dataTransfer.setData('cardId', card.id)
-}
-
+  event.dataTransfer.dropEffect = "move";
+  event.dataTransfer.effectAllowed = "move";
+  event.dataTransfer.setData("cardId", card.id);
+};
 </script>
 
 <script>
@@ -34,6 +36,6 @@ export default {
   name: "CardItem",
   props: {
     card: {},
-  }
+  },
 };
 </script>

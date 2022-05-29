@@ -1,11 +1,11 @@
 <template>
   <div class="h-min w-72 p-3 rounded-lg bg-gray-300">
     <div class="flex flex-row">
-      <div class="w-11/12 text-xl mb-3 px-2">
+      <div class="w-11/12 text-xl mb-3 px-2 break-words">
         {{ col.name }}
       </div>
       <div
-        class="w-1/12 text-gray-300 hover:text-black"
+        class="w-1/12 text-gray-300 hover:text-black text-center font-bold"
         @click="removeCol(col.id)"
       >
         X
